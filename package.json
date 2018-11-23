@@ -1,6 +1,6 @@
 {
   "name": "lzj",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "an example component library built with Reart",
   "main": "build/index.js",
   "scripts": {
