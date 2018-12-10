@@ -23,15 +23,6 @@ module.exports = function(config, env) {
     include: path.resolve(__dirname, '../'),
   });
 
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /(node_modules|bower_components)/,
-    loader: 'babel',
-    query: {
-      presets: ['es2015']
-    }
-  });
-
   config.resolve.extensions.push('.tsx');
   config.resolve.extensions.push('.ts');
   config.resolve.extensions.push('.js');
