@@ -1,9 +1,9 @@
-import React, { ButtonHTMLAttributes } from 'react';
 // import IconSizeType from './types/icon-sizes';
 // import { IconType } from './types/icons';
 import cn from 'classnames';
+import React, { ButtonHTMLAttributes } from 'react';
 
-import Styles from './icon.scss';
+import Styles from './style/icon.scss';
 
 export interface IconProps {
   // type: IconType;
@@ -22,7 +22,7 @@ export const Icon: React.SFC<IconProps & React.InputHTMLAttributes<any>> = ({
   onDark,
   size,
   style,
-  ...attributes
+  ...attributes,
 }) => {
   let iconStyle;
   if (onDark) {
@@ -41,7 +41,7 @@ export const Icon: React.SFC<IconProps & React.InputHTMLAttributes<any>> = ({
         Styles[`sg-icon-${type}`],
         {
           [Styles[`is-size-${size}`]]: size,
-        }
+        },
       )}
       onClick={handleClick}
       style={Object.keys(iconStyle).length ? iconStyle : null}

@@ -5,16 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = function(config, env) {
   config = storybookBaseConfig(config, env);
 
-  const typingsForCssModulesLoaderConf = {
-    loader: 'typings-for-css-modules-loader',
-    options: {
-      modules: true,
-      namedExport: true,
-      camelCase: true,
-      sass: true
-    }
-  }
-
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
@@ -29,7 +19,7 @@ module.exports = function(config, env) {
 
   config.module.rules.push({
     test: /\.scss$/,
-    loaders: ['style-loader', 'css-loader', 'sass-loader', 'typingsForCssModulesLoaderConf'],
+    loaders: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../'),
   });
 
