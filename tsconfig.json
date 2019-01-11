@@ -1,20 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
+    "strictNullChecks": true,
     "moduleResolution": "node",
-    "outDir": "./packages/ui-components",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es2015", "dom"],
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "declaration": true,
-    "declarationDir": "./packages/ui-components"
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "types": [
+      "classnames",
+      "react",
+      "react-dom"
+    ]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./src/**/*.test.*"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es"
+  ],
+  "compileOnSave": false
 }
