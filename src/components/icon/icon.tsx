@@ -22,7 +22,7 @@ export const Icon: React.SFC<IconProps & React.InputHTMLAttributes<any>> = ({
   onDark,
   size,
   style,
-  ...attributes
+  ...attributes,
 }) => {
   let iconStyle;
   if (onDark) {
